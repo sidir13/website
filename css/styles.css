@@ -1,0 +1,675 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+* {
+font-family:  "Montserrat";
+
+}
+
+body {
+    margin: 0 auto;
+}
+
+/* Tete de page */
+
+
+header.header {
+    display: flex;
+    align-items: center;
+}
+
+header.header img {
+    width: 150px;
+}
+section.top-page {
+    background : url('../images/head.jpg');
+    background-size: cover;
+    height : 80vh;
+    padding : 25px;
+}
+/* page de bienvenue */
+
+.landing-page {
+    padding : 20px 50px;
+}
+
+.big-title {
+    color : white;
+    font-size: 120px;
+    font-family: "Abril FatFace";
+    font-weight : 80;
+    margin-left: 100px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.scroll-down {
+    color : white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 160px;
+}
+/* menu de navigation */
+
+nav.nav ul {
+    display: flex;
+    flex-direction: row; /* Affichage en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Pour s'assurer que le menu s'étend sur toute la largeur */
+}
+nav.nav li {
+    margin: 0 10px; /* Espacement horizontal */
+}
+
+nav.nav {
+    display: flex;
+    justify-content: center; /* Centre l'ensemble du nav */
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+
+nav.nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+
+
+
+
+/* Présentation */
+
+#presentation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 200px 100px;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 600px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    padding-left: 200px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* Permet de placer le texte sous l'image */
+    align-items: center;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+    /* Retirer margin-left pour éviter de trop décaler l'image */
+}
+
+
+.image-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.text-content {
+    max-width: 1000px;
+}
+
+.text-content h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 25px;
+    color: black;
+}
+
+/* Services (mais pas tuto) */
+
+
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-video {
+  width: 100%;
+  max-width: 500px; /* Ajustez selon votre mise en page */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-name a {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  color: black; /* Couleur bleue pour ressembler à un lien */
+  transition: color 0.3s ease;
+}
+
+
+.video-name a:hover {
+  color: red; /* Bleu plus foncé au survol */
+  text-decoration: underline;
+}
+
+
+.profile-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-name {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+.pdf-icon {
+  width: 20px; /* Ajuste la taille selon ton design */
+  height: auto;
+  margin-left: 5px; /* Espacement entre le texte et l'icône */
+  vertical-align: middle;
+}
+
+.services {
+    background-color: #f8f0e3; /* Couleur de fond beige clair */
+    padding: 40px 20px; /* Marge intérieure haut/bas et gauche/droite */
+    text-align: center; /* Centrer le texte par défaut */
+    display: flex; /* Utiliser flexbox pour le conteneur */
+    flex-direction: column; /* Disposer les éléments en colonne */
+    justify-content: flex-end; /* Pousser la liste vers le bas */
+    height: 35vh; /* Hauteur de la section égale à 100% de la hauteur de la vue */
+  }
+
+.services-container {
+  max-width: 960px; /* Largeur maximale du contenu */
+  margin: 0 auto; /* Centrer le conteneur */
+  display: flex;
+  flex-direction: column; /* Disposer les éléments en colonne */
+  flex-grow: 1; /* Permet à la liste de prendre toute la hauteur disponible */
+}
+
+.services h2 {
+    font-size: 60px; /* Taille de la police du titre */
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: -500px;
+    color: #222; /* Couleur du titre */
+  }
+
+
+  .services p {
+    color:black; /* Couleur du titre */
+    margin-left: -400px;
+  }
+  
+  .services-contact {
+    font-size: 30px;
+    color: black;
+    margin-top: 0; /* Réduire l'espace au-dessus du deuxième paragraphe */
+    margin-bottom: 20px; /* Laissez un peu d'espace en bas si nécessaire */
+  }
+  
+
+  .services-languages {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 5px; /* Réduire l'espace en bas du premier paragraphe */
+    margin-top: 0; /* Réduire l'espace au-dessus du premier paragraphe */
+  }
+  
+  .services-list {
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 0;
+    display: flex; /* Afficher les éléments en ligne */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    font-size: 30px; /* Rendre le texte plus gros */
+    width: 90%; /* Prendre 90% de la largeur de la section */
+    max-width: 1200px; /* Largeur maximale de la liste */
+    margin: 0 auto; /* Centrer la liste */
+    margin-left: -550px;
+    gap: 150px; /* Espacement entre les éléments */
+    margin-top: auto; /* Pousser la liste vers le bas dans le conteneur */
+  }
+
+
+  .services-list::before {
+    content: "";
+    display: block;
+    width: 1000%; /* S'étend sur toute la largeur de la section */
+    border-top: 5px solid #ccc; /* Bordure plus épaisse ou ajustez la couleur */
+    margin-bottom: 1px; /* Ajoutez un peu d'espace sous la bordure si nécessaire */
+  }
+  
+
+  .services-list li {
+    font-size: 1.2em;
+    color: black; /* Couleur du texte des services */
+    flex: 1; /* Les éléments prennent une portion égale de l'espace */
+    text-align: center; /* Centrer le texte des éléments de la liste */
+  }
+
+
+
+  .contact-link {
+    text-decoration: none; /* Supprimer la ligne sous le lien */
+    color: #007bff; /* Couleur du texte du lien */
+    font-weight: bold; /* Mettre en gras */
+    background-color: yellow; /* Surligner avec un fond jaune */
+    padding: 0 5px; /* Ajouter un peu d'espace autour du texte */
+    border-radius: 3px; /* Optionnel : adoucir les bords du fond */
+  }
+  
+  .contact-link:hover {
+    background-color: #ffeb3b; /* Modifier la couleur de survol */
+    color: #0056b3; /* Modifier la couleur du texte au survol */
+  }
+
+
+/* Portfolio */
+
+.portfolio {
+    background-color: #f9f9f9; /* Couleur de fond légère */
+    padding: 40px 20px; /* Marge intérieure haut/bas et gauche/droite */
+    text-align: center; /* Centrer le texte par défaut */
+  }
+  
+  .portfolio-container {
+    max-width: 800px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrer le conteneur */
+  }
+  
+  .portfolio h2 {
+    font-size: 2.5em; /* Taille de la police du titre */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* Couleur du titre */
+  }
+  
+  .portfolio-list {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    background: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Créer des colonnes flexibles */
+    gap: 15px; /* Espacement entre les éléments de la grille */
+  }
+  
+  .portfolio-list li {
+    background-color: #fff; /* Fond blanc pour les éléments */
+    border: 1px solid #ddd; /* Bordure légère */
+    padding: 15px;
+    border-radius: 5px; /* Bords arrondis */
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .portfolio-list li:hover {
+    background-color: #e0e0e0; /* Changement de couleur au survol */
+    transform: scale(1.05); /* Léger agrandissement au survol */
+}
+
+.portfolio-list a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  background: #007BFF;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.portfolio-list a:hover {
+  background: #0056b3;
+}
+
+
+/* Conteneur pour le contenu affiché dynamiquement */
+#portfolio-content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: none; /* Caché par défaut */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.portfolio-content .content {
+  display: none;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+
+/* Afficher uniquement le contenu ciblé */
+.portfolio-content:target .content {
+  display: none; /* On s'assure que rien n'est affiché par défaut */
+}
+
+#journalistique:target,
+#juridique:target,
+#jeux:target,
+#diplomes:target,
+#technique:target {
+  display: block;
+}
+
+.portfolio-list a:hover {
+  background: #e0e0e0;
+}
+
+
+/* Animation d'apparition fluide */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+  
+/* contact */
+
+.contact-info {
+    background-image: url('../images/bottom.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Couleur du texte sur l'image de fond */
+    padding: 80px 20px; /* Ajustez la marge intérieure selon vos besoins */
+    text-align: center;
+    position: relative; /* Nécessaire pour positionner l'overlay */
+    min-height: 60vh; /* Hauteur minimale de la section */
+  }
+  
+  
+  .contact-info-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Assombrir l'image de fond pour la lisibilité du texte */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-info-container {
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 8px; /* Optionnel : bords arrondis pour le conteneur */
+  }
+  
+  .contact-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links p {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links li a {
+    font-size: 1.5em; /* Taille des icônes */
+    /* Ajoutez d'autres styles pour les icônes si nécessaire */
+  }
+  
+  /* Assurez-vous d'inclure Font Awesome ou une autre librairie d'icônes
+     si vous utilisez les classes d'icônes comme 'fab fa-linkedin' */
+
+
+/* services */
+
+.services {
+    display: flex;
+    justify-content: space-evenly;
+    margin : 50px
+}
+
+.service-item {
+    display : flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.delivery-icon {
+    font-size : 50px;
+    color : #ADD981;
+}
+
+.service-details {
+    font-weight: 600;
+    width : 200px;
+    text-align : center;
+
+}
+
+
+/* Best Enrico */
+
+
+.section-title {
+    font-size: 50px;
+    font-family: "Abril FatFace";
+    font-weight: 100;
+    position: relative;
+}
+
+.section-title::before{
+    content : "";
+    position: absolute;
+    background-color: #ADD981;
+    width : 50px;
+    height : 7px;
+    bottom:0;
+}
+
+
+.best-items {
+    margin: 50px ;
+}
+
+.best-plants{
+    min-height: 500px;
+    display:flex;
+    flex-wrap: wrap;
+
+}
+
+.plant-box{
+    position: relative;
+    background-size: cover;
+    background-position:center ;
+}
+
+
+.no-grid{
+    min-width : 350px;
+    height : 500px;
+    flex : 1;
+}
+
+.plant1 {
+    background-image: url(../images/Gorilla.jpg);
+}
+
+
+.plant2 {
+    background-image: url(../images/ENRICO_1.jpg);
+}
+
+
+.plant3 {
+    background-image: url(../images/coldur.jpg);
+}
+
+
+.plant4 {
+    background-image: url(../images/perier.jpg);
+}
+
+.plant-details {
+    position : absolute;
+    width : 100%;
+    background-color: #FFFFFFDF;
+    bottom : 0;
+    padding : 5px 20px
+}
+
+
+.plant-name {
+    font-size : 22px;
+    font-weight : 600;
+    line-height: 3px;
+}
+
+.plant-price{
+    color : #ADD981;
+    font-weight: 800;
+    line-height: 3px;
+    font-size: 14px;
+}
+
+
+/* Nos Enricos */
+
+.all-plants {
+    margin: 100px;
+}
+
+
+.plant-grid{
+    display : grid;
+    min-height: 150vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 400px);
+}
+.plant-grid1 {
+    background-image: url(../images/nos_plantes/1.jpg);
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.plant-grid2 {
+    background-image: url(../images/nos_plantes/2.jpg);
+    grid-column: 3/5;
+}
+
+.plant-grid3 {
+    background-image: url(../images/nos_plantes/3.jpg);
+    grid-column: 3/5;
+}
+
+.plant-grid4 {
+    background-image: url(../images/nos_plantes/4.jpg);
+    grid-column: 1;
+    grid-row: 3/5;
+}
+
+.plant-grid5 {
+    background-image: url(../images/nos_plantes/5.jpg);
+    grid-column: 2/4;
+    grid-row: 3/5;
+}
+
+.plant-grid6 {
+    background-image: url(../images/nos_plantes/6.jpg);
+    grid-column: 4;
+    grid-row: 3/5;
+}
+
+
+/* footer */
+
+footer{
+    display : flex;
+    justify-content: space-between;
+    aligne-items:center;
+    margin : 20px 100px;
+    font-weight: 600;
+}
+
+
+footer a.cgv {
+    text-decoration: none;
+    color : black;
+}
+
+
