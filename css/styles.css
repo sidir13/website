@@ -9,47 +9,66 @@ body {
     margin: 0 auto;
 }
 
-/* Tete de page */
-
-
+/* Tête de page */
 header.header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header.header img {
-    width: 150px;
-}
 section.top-page {
-    background : url('../images/head.jpg');
-    background-size: cover;
-    height : 80vh;
-    padding : 25px;
+  background: url('../images/head.jpg') no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+  padding: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-/* page de bienvenue */
 
 .landing-page {
-    padding : 20px 50px;
+  padding: 20px;
+  text-align: center;
 }
 
 .big-title {
-    color : white;
-    font-size: 120px;
-    font-family: "Abril FatFace";
-    font-weight : 80;
-    margin-left: 100px;
-}
-
-html{
-    scroll-behavior: smooth;
+  color: white;
+  font-size: 80px;
+  font-family: "Abril FatFace", cursive;
+  font-weight: 300;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 90%;
 }
 
 .scroll-down {
-    color : white;
-    text-decoration: none;
-    position: absolute;
-    bottom: 160px;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
 }
+
+.scroll-down i {
+  margin-left: 8px;
+}
+
+/* Responsive - petits écrans */
+@media screen and (max-width: 768px) {
+  .big-title {
+      font-size: 40px;
+      padding: 10px;
+  }
+
+  .scroll-down {
+      font-size: 16px;
+      bottom: 20px;
+  }
+}
+
 /* menu de navigation */
 
 nav.nav ul {
