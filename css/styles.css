@@ -84,41 +84,42 @@ nav.nav li a {
 
 
 /* Présentation */
-
 #presentation {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 200px 100px;
+    padding: 100px 20px;
     background-color: #f5f5f5;
     width: 100%;
-    height: 600px;
     box-sizing: border-box;
 }
 
 .container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 50px;
+    max-width: 1200px;
     width: 100%;
-    padding-left: 200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .image-container {
     display: flex;
-    flex-direction: column; /* Permet de placer le texte sous l'image */
+    flex-direction: column;
     align-items: center;
+    flex: 1 1 300px;
 }
 
-.profile-img {
+.profile-image {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #333;
-    /* Retirer margin-left pour éviter de trop décaler l'image */
 }
-
 
 .image-name {
     font-size: 20px;
@@ -128,172 +129,155 @@ nav.nav li a {
 }
 
 .text-content {
-    max-width: 1000px;
+    flex: 2 1 500px;
+    max-width: 100%;
 }
 
 .text-content h2 {
-    font-size: 40px;
+    font-size: 32px;
     margin-bottom: 15px;
 }
 
 .text-content p {
-    font-size: 25px;
+    font-size: 20px;
     color: black;
 }
 
+/* --- Media queries pour les petits écrans --- */
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .text-content h2 {
+        font-size: 28px;
+    }
+
+    .text-content p {
+        font-size: 18px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
 /* Services (mais pas tuto) */
+.services {
+  background-color: #f8f0e3;
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
 
+.pdf-icon {
+  width: 14px; /* ou même 12px si tu veux vraiment petit */
+  height: auto;
+  margin-left: 4px;
+  vertical-align: text-bottom; /* aligné avec la ligne de base du texte */
+}
 
-
-.video-container {
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.profile-video {
-  width: 100%;
-  max-width: 500px; /* Ajustez selon votre mise en page */
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.video-name a {
-  margin-top: 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-decoration: none;
-  color: black; /* Couleur bleue pour ressembler à un lien */
-  transition: color 0.3s ease;
-}
-
-
-.video-name a:hover {
-  color: red; /* Bleu plus foncé au survol */
-  text-decoration: underline;
-}
-
-
-.profile-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.image-container {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.image-name {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-
-.pdf-icon {
-  width: 20px; /* Ajuste la taille selon ton design */
-  height: auto;
-  margin-left: 5px; /* Espacement entre le texte et l'icône */
-  vertical-align: middle;
-}
-
-.services {
-    background-color: #f8f0e3; /* Couleur de fond beige clair */
-    padding: 40px 20px; /* Marge intérieure haut/bas et gauche/droite */
-    text-align: center; /* Centrer le texte par défaut */
-    display: flex; /* Utiliser flexbox pour le conteneur */
-    flex-direction: column; /* Disposer les éléments en colonne */
-    justify-content: flex-end; /* Pousser la liste vers le bas */
-    height: 35vh; /* Hauteur de la section égale à 100% de la hauteur de la vue */
-  }
-
-.services-container {
-  max-width: 960px; /* Largeur maximale du contenu */
-  margin: 0 auto; /* Centrer le conteneur */
-  display: flex;
-  flex-direction: column; /* Disposer les éléments en colonne */
-  flex-grow: 1; /* Permet à la liste de prendre toute la hauteur disponible */
+  gap: 20px;
 }
 
 .services h2 {
-    font-size: 60px; /* Taille de la police du titre */
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: -500px;
-    color: #222; /* Couleur du titre */
+  font-size: 48px;
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+}
+
+.services p {
+  color: black;
+  font-size: 20px;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.services-languages,
+.services-contact {
+  font-size: 22px;
+}
+
+.services-list {
+  list-style: none;
+  padding: 20px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.services-list::before {
+  content: "";
+  display: block;
+  width: 100%;
+  border-top: 4px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.services-list li {
+  font-size: 1.2em;
+  color: black;
+  flex: 1 1 150px;
+  text-align: center;
+}
+
+/* Lien contact */
+.contact-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  background-color: yellow;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.contact-link:hover {
+  background-color: #ffeb3b;
+  color: #0056b3;
+}
+
+/* 📱 Responsive - petits écrans */
+@media screen and (max-width: 768px) {
+  .services h2 {
+      font-size: 36px;
   }
 
-
-  .services p {
-    color:black; /* Couleur du titre */
-    margin-left: -400px;
-  }
-  
+  .services-languages,
   .services-contact {
-    font-size: 30px;
-    color: black;
-    margin-top: 0; /* Réduire l'espace au-dessus du deuxième paragraphe */
-    margin-bottom: 20px; /* Laissez un peu d'espace en bas si nécessaire */
+      font-size: 18px;
   }
-  
 
-  .services-languages {
-    font-size: 30px;
-    color: black;
-    margin-bottom: 5px; /* Réduire l'espace en bas du premier paragraphe */
-    margin-top: 0; /* Réduire l'espace au-dessus du premier paragraphe */
-  }
-  
   .services-list {
-    list-style: none; /* Supprimer les puces de la liste */
-    padding: 0;
-    display: flex; /* Afficher les éléments en ligne */
-    justify-content: space-between; /* Espacement égal entre les éléments */
-    font-size: 30px; /* Rendre le texte plus gros */
-    width: 90%; /* Prendre 90% de la largeur de la section */
-    max-width: 1200px; /* Largeur maximale de la liste */
-    margin: 0 auto; /* Centrer la liste */
-    margin-left: -550px;
-    gap: 150px; /* Espacement entre les éléments */
-    margin-top: auto; /* Pousser la liste vers le bas dans le conteneur */
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px;
   }
-
-
-  .services-list::before {
-    content: "";
-    display: block;
-    width: 1000%; /* S'étend sur toute la largeur de la section */
-    border-top: 5px solid #ccc; /* Bordure plus épaisse ou ajustez la couleur */
-    margin-bottom: 1px; /* Ajoutez un peu d'espace sous la bordure si nécessaire */
-  }
-  
 
   .services-list li {
-    font-size: 1.2em;
-    color: black; /* Couleur du texte des services */
-    flex: 1; /* Les éléments prennent une portion égale de l'espace */
-    text-align: center; /* Centrer le texte des éléments de la liste */
+      font-size: 1em;
   }
+}
 
-
-
-  .contact-link {
-    text-decoration: none; /* Supprimer la ligne sous le lien */
-    color: #007bff; /* Couleur du texte du lien */
-    font-weight: bold; /* Mettre en gras */
-    background-color: yellow; /* Surligner avec un fond jaune */
-    padding: 0 5px; /* Ajouter un peu d'espace autour du texte */
-    border-radius: 3px; /* Optionnel : adoucir les bords du fond */
-  }
-  
-  .contact-link:hover {
-    background-color: #ffeb3b; /* Modifier la couleur de survol */
-    color: #0056b3; /* Modifier la couleur du texte au survol */
-  }
 
 
 /* Portfolio */
