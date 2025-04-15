@@ -17,7 +17,7 @@ header.header {
 }
 
 section.top-page {
-  background: url('../images/head.jpg') no-repeat center center;
+  background: url('../images/fond.jpg') no-repeat center center;
   background-size: cover;
   height: 80vh;
   padding: 25px;
@@ -104,86 +104,107 @@ nav.nav li a {
 
 /* Présentation */
 #presentation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 20px;
-    background-color: #f5f5f5;
-    width: 100%;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  background-color: #f5f5f5;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
 }
 
+.Présentation .text-content p {
+  margin-bottom: -7px;
+}
+
+
 .image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 300px;
+}
+
+.image-wrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
 
 .profile-image {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #333;
+  width: 100%; /* Make the image take the full width of its parent */
+  height: 100%; /* Make the image take the full height of its parent */
+  object-fit: cover; /* Ensure the image covers the entire container without distortion */
+  border-radius: 50%; /* Keep the circular shape */
+  display: block; /* Prevent extra space below the image */
 }
 
 .image-name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
 }
 
 .text-content {
-    flex: 2 1 500px;
-    max-width: 100%;
+  flex: 2 1 500px;
+  max-width: 100%;
 }
 
+
 .text-content h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.Présentation .text-content .spacer {
+  height: 1em; /* Ajustez la hauteur selon l'espace désiré */
 }
 
 .text-content p {
-    font-size: 20px;
-    color: black;
+  font-size: 20px;
+  color: black;
 }
 
 /* --- Media queries pour les petits écrans --- */
 
 @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0 10px;
-    }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+  }
 
-    .text-content h2 {
-        font-size: 28px;
-    }
+  .text-content h2 {
+    font-size: 28px;
+  }
 
-    .text-content p {
-        font-size: 18px;
-    }
+  .text-content p {
+    font-size: 18px;
+  }
 
-    .profile-image {
-        width: 200px;
-        height: 200px;
-    }
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 
@@ -258,7 +279,59 @@ nav.nav li a {
   color: black;
   flex: 1 1 150px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
+
+
+/* Stylisé les images de SERVICES*/
+
+.services-list li img {
+  width: 60px; /* tu peux ajuster selon le style voulu */
+  height: auto;
+  margin-bottom: 5px;
+}
+
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.service-card {
+  background-color: #fefaf5;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-card p {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+}
+
 
 /* Lien contact */
 .contact-link {
@@ -406,6 +479,63 @@ nav.nav li a {
 
 .portfolio-list a:hover {
   background: #e0e0e0;
+}
+
+
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.portfolio-card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #f4ebe6;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.portfolio-card:hover img {
+  opacity: 1;
+}
+
+.card-title {
+  position: relative;
+  z-index: 2;
+  color: #222;
+  font-weight: 500;
+  font-size: 1.1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
 }
 
 

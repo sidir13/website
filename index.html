@@ -12,7 +12,7 @@
         <header class ="header">
             <nav class="nav">
                 <ul>
-                    <li><a href="#landig-page" target="_blank">Acceuil</a></li>
+                    <li><a href="#landig-page" target="_blank">Accueil</a></li>
                     <li><a href="#presentation">Présentation</a></li>
                     <li><a href="#services">Services proposés</a></li>
                     <li><a href="#Portfolio">Portfolio</a></li>
@@ -39,8 +39,14 @@
                 </p>
             </div>
             <div class="text-content">
-                <h2>Présentation</h2>
-                <p>Je suis <strong>traductrice professionnelle</strong> travaillant avec les langues <strong>polonaise</strong>, <strong>française</strong>, et <strong>anglaise</strong>. Étant bilingue de naissance en polonais et français, je vis actuellement entre la France et la Pologne, ce qui me permet d'enrichir ma compréhension culturelle et d'apporter une perspective unique à mes traductions. Titulaire d'un master en traduction, je travaille en <strong>freelance</strong> depuis 2024.</p>
+                <h2 class="h2_tc">Présentation</h2>
+                <div class="spacer"></div>
+                <p>Je suis <strong>traductrice professionnelle</strong> travaillant avec les langues </p>
+                <p><strong>polonaise</strong>, <strong>française</strong>, et <strong>anglaise</strong>. Étant bilingue de naissance en</p>
+                <p> polonais et français, je vis actuellement entre la France et la Pologne, ce </p> 
+                <p>qui me permet d'enrichir ma compréhension culturelle et d'apporter une </p>
+                <p>perspective unique à mes traductions. Titulaire d'un master en </p> 
+                <p>traduction, je travaille en <strong>freelance</strong> depuis 2024.</p>
             </div>
         </div>
     </section>
@@ -49,15 +55,26 @@
         <section class="services", id = "services">
             <div class="services-container">
             <h2>Services proposés</h2>
-            <p class="services-languages"><strong> Tout les services sont proposés de l'anglais vers le français et le polonais</strong></p>
-            <p class="services-contact">Pour toute demande de devis, <a href="#Contact" class="contact-link">contactez-moi</a></p>
-            <ul class="services-list">
-                <li>Traduction</li>
-                <li>Post-édition</li>
-                <li>Relecture</li>
-                <li>Correction</li>
-                <li>Localisation</li>
-            </ul>
+            <p class="services-languages"><strong> Tous les services sont proposés de l'anglais vers le français et le polonais</strong></p>
+            <p class="services-contact">Pour toute demande de <strong>devis</strong>, <a href="#Contact" class="contact-link">contactez moi</a></p>
+            <div class="services-cards">
+                <div class="service-card">
+                  <img src="images/traduction.jpg" alt="Traduction">
+                  <p>Traduction</p>
+                </div>
+                <div class="service-card">
+                  <img src="images/post-edition.jpg" alt="Post-édition">
+                  <p>Post-édition</p>
+                </div>
+                <div class="service-card">
+                  <img src="images/correction.png" alt="Correction">
+                  <p>Correction</p>
+                </div>
+                <div class="service-card">
+                  <img src="images/Localisation.jpg" alt="Localisation">
+                  <p>Localisation</p>
+                </div>
+              </div>
             </div>
         </section>
 
@@ -81,13 +98,28 @@
     <section class="portfolio" id="Portfolio">
         <div class="portfolio-container">
             <h2>Portfolio</h2>
-            <ul class="portfolio-list">
-                <li><a href="journalistique.html" target="_blank">Traduction journalistique</a></li>
-                <li><a href="juridique.html" target="_blank">Traduction juridique</a></li>
-                <li><a href="jeux.html" target="_blank">Traduction de jeux</a></li>
-                <li><a href="diplomes.html" target="_blank">Traduction de diplômes</a></li>
-                <li><a href="technique.html" target="_blank">Traduction technique</a></li>
-            </ul>
+            <div class="portfolio-cards">
+                <a href="journalistique.html" target="_blank" class="portfolio-card">
+                  <span class="card-title">Traduction journalistique</span>
+                  <img src="images/portfolio-journalistique.jpg" alt="Traduction journalistique">
+                </a>
+                <a href="jeux.html" target="_blank" class="portfolio-card">
+                  <span class="card-title">Traduction de jeux</span>
+                  <img src="images/portfolio-jeux.jpg" alt="Traduction de jeux">
+                </a>
+                <a href="technique.html" target="_blank" class="portfolio-card">
+                  <span class="card-title">Traduction technique</span>
+                  <img src="images/portfolio-technique.jpg" alt="Traduction technique">
+                </a>
+                <a href="juridique.html" target="_blank" class="portfolio-card">
+                  <span class="card-title">Traduction juridique</span>
+                  <img src="images/portfolio-juridiques.jpg" alt="Traduction juridique">
+                </a>
+                <a href="diplomes.html" target="_blank" class="portfolio-card">
+                  <span class="card-title">Traduction de diplômes</span>
+                  <img src="images/portfolio-diplomes.jpg" alt="Traduction de diplômes">
+                </a>
+              </div>
         </div>
     </section>
  <!-- contact-->
@@ -186,8 +218,8 @@
 
     <footer>
         <p class = "Name">&copy; 2025  - Gabriella Gruszka</p>
-        <a href="" class="cgv">Gabriella Gruszka – EI
-        </a>
+        <p href="" class="cgv">Gabriella Gruszka – EI
+        </p>
     </footer>
 </body>
 </html>
