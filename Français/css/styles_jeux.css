@@ -1,0 +1,52 @@
+body {
+    background-color:#f8f0e3; /* Code couleur pour beige */
+    font-family: "Times New Roman", sans-serif; /* Vous pouvez ajuster la police si nécessaire */
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Fond sombre */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* --- STYLE DE LA NAVIGATION --- */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    transition: 0.3s ease-in-out;
+}
+
+/* --- STYLE BOUTON PRINCIPAL "Mon site" --- */
+nav ul li .btn-main {
+    background-color: #ff6600; /* Couleur distincte */
+    color: white;
+}
+
+
+
+.section-titre {
+    font-size: 40px; /* assez gros */
+    font-weight: bold; /* en gras */
+    color: #2c3e50; /* couleur foncée chic */
+    text-align: center;
+    margin-top: 40px;
+  }

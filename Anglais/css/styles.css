@@ -17,7 +17,7 @@ header.header {
 }
 
 section.top-page {
-  background: url('../images/fond.jpg') no-repeat center center;
+  background: url('../../images/fond.jpg') no-repeat center center;
   background-size: cover;
   height: 80vh;
   padding: 25px;
@@ -99,7 +99,82 @@ nav.nav li a {
 
 
 
+/* Bouttons traduction */
 
+
+/* Styles généraux pour la section */
+.top-page {
+  position: relative;
+}
+
+/* Header : flex entre nav et les boutons */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Nav (menu) */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Boutons en haut à droite */
+.top-buttons {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.top-buttons button {
+  padding: 8px 16px;
+  border: none;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-buttons button:hover {
+  background-color: black;
+}
+
+
+/* Style des liens comme des boutons */
+.lang-btn {
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.lang-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f91);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
 
 
 /* Présentation */
@@ -554,7 +629,7 @@ nav.nav li a {
 /* contact */
 
 .contact-info {
-    background-image: url('../images/bottom.jpg'); /* Remplacez par le chemin de votre image */
+    background-image: url('../../images/bottom.jpg'); /* Remplacez par le chemin de votre image */
     background-size: cover;
     background-position: center;
     color: #fff; /* Couleur du texte sur l'image de fond */
@@ -783,7 +858,7 @@ nav.nav li a {
 }
 
 .plant-grid6 {
-    background-image: url(../images/nos_plantes/6.jpg);
+    background-image: url(../../images/nos_plantes/6.jpg);
     grid-column: 4;
     grid-row: 3/5;
 }

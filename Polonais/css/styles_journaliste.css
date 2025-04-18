@@ -1,0 +1,118 @@
+/* Applique un fond beige à toute la page */
+body {
+    background-color:#f8f0e3; /* Code couleur pour beige */
+    font-family: "Times New Roman", sans-serif; /* Vous pouvez ajuster la police si nécessaire */
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Fond sombre */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- STYLE DE LA NAVIGATION --- */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    transition: 0.3s ease-in-out;
+}
+
+/* --- STYLE BOUTON PRINCIPAL "Mon site" --- */
+nav ul li .btn-main {
+    background-color: #ff6600; /* Couleur distincte */
+    color: white;
+}
+
+/* --- HOVER EFFETS (Quand on passe la souris) --- */
+nav ul li a:hover {
+    background-color: #ff6600;
+    color: white;
+}
+
+/* --- STYLE DU LIEN VOXEUROP --- */
+.voxeurop-link {
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* hyperlien */
+
+/* Applique le texte noir pour tout le paragraphe */
+section p {
+    color: black;
+}
+
+/* Applique un style pour le lien, souligné et en noir */
+section a {
+    text-decoration: underline;
+    color: black;
+}
+
+
+
+/* columns */
+
+
+.two-columns {
+    display: flex; /* Utilise Flexbox pour l'agencement en colonnes */
+    flex-wrap: wrap; /* Permet aux colonnes de passer à la ligne si l'espace est insuffisant */
+}
+
+.column {
+    flex: 1; /* Chaque colonne prend une part égale de l'espace disponible */
+    padding: 15px;
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur de l'élément */
+}
+
+/* Optionnel : Ajouter une marge entre les colonnes */
+.column + .column {
+    margin-left: 20px;
+}
+
+/* Optionnel : Styles pour les écrans plus petits (une seule colonne) */
+@media (max-width: 768px) {
+    .column {
+        flex: 100%; /* Les colonnes prennent toute la largeur sur les petits écrans */
+        margin-left: 0; /* Supprime la marge entre les colonnes */
+        margin-bottom: 15px; /* Ajoute une marge en bas pour les séparer */
+    }
+}
+
+
+
+/* Conteneur avec une largeur limitée pour éviter que le texte ne s'étire trop */
+.limited-text {
+    max-width: 800px; /* Ajustez cette valeur selon vos besoins */
+    word-wrap: break-word; /* Coupe le mot si nécessaire */
+    overflow-wrap: break-word; /* Alternative pour la compatibilité */
+    text-align: justify; /* Justifie le texte pour une meilleure lisibilité */
+}
+
+
+/* Conteneur avec une largeur limitée pour éviter que le texte ne s'étire trop */
+.title-article {
+    max-width: 800px; /* Ajustez cette valeur selon vos besoins */
+    word-wrap: break-word; /* Coupe le mot si nécessaire */
+    overflow-wrap: break-word; /* Alternative pour la compatibilité */
+    text-align: justify; /* Justifie le texte pour une meilleure lisibilité */
+}
