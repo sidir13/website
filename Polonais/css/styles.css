@@ -10,11 +10,7 @@ body {
 }
 
 /* Tête de page */
-header.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 section.top-page {
   background: url('../../images/fond.jpg') no-repeat center center;
@@ -126,7 +122,7 @@ nav.nav li a {
 
 .nav a {
   text-decoration: none;
-  color: #333;
+  color: white; 
   font-weight: bold;
 }
 
@@ -177,11 +173,57 @@ nav.nav li a {
 }
 
 
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .big-title {
+    font-size: 9vw;
+  }
+
+  .top-buttons {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .lang-btn {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
+  .scroll-down {
+    font-size: 14px;
+  }
+
+  .big-title {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
 /* Présentation */
 #presentation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 100px 20px;
   background-color: #f5f5f5;
   width: 100%;
@@ -190,20 +232,14 @@ nav.nav li a {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 50px;
   max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
-  flex-wrap: wrap;
 }
-
-.Présentation .text-content p {
-  margin-bottom: -7px;
-}
-
 
 .image-container {
   display: flex;
@@ -225,80 +261,129 @@ nav.nav li a {
 }
 
 .profile-image {
-  width: 100%; /* Make the image take the full width of its parent */
-  height: 100%; /* Make the image take the full height of its parent */
-  object-fit: cover; /* Ensure the image covers the entire container without distortion */
-  border-radius: 50%; /* Keep the circular shape */
-  display: block; /* Prevent extra space below the image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 .image-name {
   font-size: 20px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #333;
+  text-align: center;
+}
+
+.image-name a {
+  color: #333;
+  text-decoration: none;
+}
+
+.image-name a:hover {
+  text-decoration: underline;
+}
+
+.pdf-icon {
+  width: 18px;
+  margin-left: 8px;
+  vertical-align: middle;
 }
 
 .text-content {
   flex: 2 1 500px;
-  max-width: 100%;
+  max-width: 600px;
 }
-
 
 .text-content h2 {
   font-size: 32px;
   margin-bottom: 15px;
 }
-.Présentation .text-content .spacer {
-  height: 1em; /* Ajustez la hauteur selon l'espace désiré */
+
+.presentation .text-content .spacer {
+  height: 1em;
 }
 
 .text-content p {
   font-size: 20px;
-  color: black;
+  color: #111;
+  margin: 5px 0;
+  line-height: 1.6;
 }
 
-/* --- Media queries pour les petits écrans --- */
+/* Responsive - Tablettes */
+@media screen and (max-width: 1024px) {
+  .container {
+    gap: 30px;
+  }
 
+  .text-content {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/* Responsive - Mobiles */
 @media screen and (max-width: 768px) {
+  #presentation {
+    padding: 60px 15px;
+  }
+
   .container {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    padding: 0 10px;
+  }
+
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
   }
 
   .text-content h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .text-content p {
     font-size: 18px;
   }
+}
 
-  .profile-image {
-    width: 200px;
-    height: 200px;
+@media screen and (max-width: 480px) {
+  .image-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+  }
+
+  .text-content h2 {
+    font-size: 24px;
+  }
+
+  .image-name {
+    font-size: 16px;
   }
 }
 
 
-/* Services (mais pas tuto) */
+/* ===== Services Section ===== */
+
 .services {
   background-color: #f8f0e3;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-}
-
-.pdf-icon {
-  width: 14px; /* ou même 12px si tu veux vraiment petit */
-  height: auto;
-  margin-left: 4px;
-  vertical-align: text-bottom; /* aligné avec la ligne de base du texte */
 }
 
 .services-container {
@@ -307,7 +392,7 @@ nav.nav li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .services h2 {
@@ -317,65 +402,36 @@ nav.nav li a {
   margin: 0;
 }
 
-.services p {
+.services-languages,
+.services-contact {
+  font-size: 22px;
   color: black;
-  font-size: 20px;
   margin: 0;
   padding: 0 10px;
 }
 
-.services-languages,
-.services-contact {
-  font-size: 22px;
+.services-contact .contact-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  background-color: yellow;
+  padding: 0 5px;
+  border-radius: 3px;
 }
 
-.services-list {
-  list-style: none;
-  padding: 20px 0 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+.contact-link:hover {
+  background-color: #ffeb3b;
+  color: #0056b3;
 }
 
-.services-list::before {
-  content: "";
-  display: block;
-  width: 100%;
-  border-top: 4px solid #ccc;
-  margin-bottom: 20px;
-}
-
-.services-list li {
-  font-size: 1.2em;
-  color: black;
-  flex: 1 1 150px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-
-/* Stylisé les images de SERVICES*/
-
-.services-list li img {
-  width: 60px; /* tu peux ajuster selon le style voulu */
-  height: auto;
-  margin-bottom: 5px;
-}
-
+/* --- Cards --- */
 
 .services-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 .service-card {
@@ -407,176 +463,118 @@ nav.nav li a {
   color: #222;
 }
 
+/* ===== Responsive ===== */
 
-/* Lien contact */
-.contact-link {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-  background-color: yellow;
-  padding: 0 5px;
-  border-radius: 3px;
-}
-
-.contact-link:hover {
-  background-color: #ffeb3b;
-  color: #0056b3;
-}
-
-/* 📱 Responsive - petits écrans */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .services h2 {
-      font-size: 36px;
+    font-size: 40px;
   }
 
   .services-languages,
   .services-contact {
-      font-size: 18px;
+    font-size: 20px;
   }
 
-  .services-list {
-      flex-direction: column;
-      gap: 15px;
-      padding: 10px;
-  }
-
-  .services-list li {
-      font-size: 1em;
+  .services-cards {
+    gap: 20px;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 60px 15px;
+  }
 
+  .services h2 {
+    font-size: 32px;
+  }
 
-/* Portfolio */
+  .services-languages,
+  .services-contact {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .service-card img {
+    height: 140px;
+  }
+
+  .service-card p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services h2 {
+    font-size: 28px;
+  }
+
+  .services-languages,
+  .services-contact {
+    font-size: 16px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 260px;
+    padding: 15px;
+  }
+
+  .service-card img {
+    height: 130px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+  }
+}
+
+/* ===== PORTFOLIO SECTION ===== */
 
 .portfolio {
-    background-color: #f9f9f9; /* Couleur de fond légère */
-    padding: 40px 20px; /* Marge intérieure haut/bas et gauche/droite */
-    text-align: center; /* Centrer le texte par défaut */
-  }
-  
-  .portfolio-container {
-    max-width: 800px; /* Largeur maximale du contenu */
-    margin: 0 auto; /* Centrer le conteneur */
-  }
-  
-  .portfolio h2 {
-    font-size: 2.5em; /* Taille de la police du titre */
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333; /* Couleur du titre */
-  }
-  
-  .portfolio-list {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    background: #f0f0f0;
-    border-radius: 5px;
-    text-align: center;
-    transition: 0.3s;
-    list-style: none; /* Supprimer les puces de la liste */
-    padding: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Créer des colonnes flexibles */
-    gap: 15px; /* Espacement entre les éléments de la grille */
-  }
-  
-  .portfolio-list li {
-    background-color: #fff; /* Fond blanc pour les éléments */
-    border: 1px solid #ddd; /* Bordure légère */
-    padding: 15px;
-    border-radius: 5px; /* Bords arrondis */
-    text-align: center;
-    font-size: 1.1em;
-    color: #555;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-
-  .portfolio-list li:hover {
-    background-color: #e0e0e0; /* Changement de couleur au survol */
-    transform: scale(1.05); /* Léger agrandissement au survol */
-}
-
-.portfolio-list a {
-  text-decoration: none;
-  color: white;
-  display: block;
-  padding: 10px;
-  background: #007BFF;
-  border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 80px 20px;
   text-align: center;
-  transition: 0.3s;
 }
 
-.portfolio-list a:hover {
-  background: #0056b3;
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
-/* Conteneur pour le contenu affiché dynamiquement */
-#portfolio-content {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  display: none; /* Caché par défaut */
-  animation: fadeIn 0.5s ease-in-out;
+.portfolio h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
 }
-
-
-.portfolio-content .content {
-  display: none;
-  padding: 20px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-
-/* Afficher uniquement le contenu ciblé */
-.portfolio-content:target .content {
-  display: none; /* On s'assure que rien n'est affiché par défaut */
-}
-
-#journalistique:target,
-#juridique:target,
-#jeux:target,
-#diplomes:target,
-#technique:target {
-  display: block;
-}
-
-.portfolio-list a:hover {
-  background: #e0e0e0;
-}
-
 
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .portfolio-card {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   background-color: #f4ebe6;
   border-radius: 12px;
   overflow: hidden;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  cursor: pointer;
   text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-card:hover {
@@ -585,8 +583,6 @@ nav.nav li a {
 
 .portfolio-card img {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -605,99 +601,184 @@ nav.nav li a {
   color: #222;
   font-weight: 500;
   font-size: 1.1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 10px;
   text-align: center;
 }
 
-
-/* Animation d'apparition fluide */
+/* Animation */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(10px);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-  
-/* contact */
+
+/* ===== RESPONSIVE PORTFOLIO ===== */
+@media screen and (max-width: 1024px) {
+  .portfolio h2 {
+    font-size: 40px;
+  }
+  .portfolio-card {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio h2 {
+    font-size: 32px;
+  }
+
+  .portfolio-card {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+  }
+
+  .card-title {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio-card {
+    height: 180px;
+    max-width: 90%;
+  }
+
+  .card-title {
+    font-size: 0.95em;
+  }
+}
+
+/* ===== SECTION CONTACT ===== */
 
 .contact-info {
-    background-image: url('../../images/bottom.jpg'); /* Remplacez par le chemin de votre image */
-    background-size: cover;
-    background-position: center;
-    color: #fff; /* Couleur du texte sur l'image de fond */
-    padding: 80px 20px; /* Ajustez la marge intérieure selon vos besoins */
-    text-align: center;
-    position: relative; /* Nécessaire pour positionner l'overlay */
-    min-height: 60vh; /* Hauteur minimale de la section */
+  background-image: url('../../images/bottom.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-info-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0; /* raccourci pour top, right, bottom, left: 0 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-info-container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 100%;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Titre */
+.contact-info h2 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 20px;
+}
+
+/* Texte */
+.contact-info p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin-bottom: 15px;
+}
+
+/* Lien e-mail */
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Réseaux sociaux */
+.social-links {
+  margin-top: 25px;
+}
+
+.social-links p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-links li a {
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: #ffd700; /* Or au survol */
+}
+
+
+/* ===== ANIMATION ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
   }
-  
-  
-  .contact-info-overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Assombrir l'image de fond pour la lisibilité du texte */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+
+/* ===== RESPONSIVE : PETITS ÉCRANS ===== */
+@media screen and (max-width: 600px) {
   .contact-info-container {
-    max-width: 600px;
-    padding: 40px;
-    border-radius: 8px; /* Optionnel : bords arrondis pour le conteneur */
+    padding: 30px 20px;
   }
-  
-  .contact-info h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  .contact-info p {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-  }
-  
-  .contact-info a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-  
-  .social-links {
-    margin-top: 20px;
-  }
-  
-  .social-links p {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
+
   .social-links ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    gap: 12px;
   }
-  
+
   .social-links li a {
-    font-size: 1.5em; /* Taille des icônes */
-    /* Ajoutez d'autres styles pour les icônes si nécessaire */
+    font-size: 1.3em;
   }
+}
+
   
   /* Assurez-vous d'inclure Font Awesome ou une autre librairie d'icônes
      si vous utilisez les classes d'icônes comme 'fab fa-linkedin' */
